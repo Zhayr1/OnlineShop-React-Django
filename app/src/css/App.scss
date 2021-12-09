@@ -1,0 +1,107 @@
+.icon {
+    display:inline-flex;
+    vertical-align:top;
+    margin-right: 3px;
+}
+
+.cbtn:hover {
+      transform: scale(1.1);
+      background-color: #446492;
+}
+.cbtn:focus {
+
+      background-color: #446492;
+}
+
+.btn-flat:hover {
+    background-color: #4F80C4;
+    color: white;
+}
+
+.navbarmt {
+    margin-top: 100px;
+}
+
+.navbar-container {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p3 {
+    padding: 15px;
+}
+
+.pl3 {
+    padding-left: 15px;
+}
+
+.fill-screen {
+    min-height: 89vh;
+}
+
+.primary-text {
+    color: #4F80C4;
+}
+
+.secondary-text {
+    color: #7C4299;
+}
+
+.tertiary-text {
+    color: #7CB061;
+}
+
+.primary-darken2-text {
+    color: #D1496B;
+}
+
+.primary-darken1-text {
+    color: #4DDBAD;
+}
+
+.primary {
+    background-color: #4F80C4;
+    color: white;
+}
+
+.secondary {
+    background-color: #7C4299;
+    color: white;
+}
+
+.tertiary {
+    background-color: #7CB061;
+    color: white;
+}
+
+.primary-darken2 {
+    background-color: #D1496B;
+    color: white;
+}
+
+.primary-darken1 {
+    background-color: #4DDBAD;
+    color: white;
+}

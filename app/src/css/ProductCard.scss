@@ -1,0 +1,31 @@
+.product-image {
+    padding: 4px 4px 0 4px;
+    width: 163px;
+    height: 163px;
+}
+
+.product-card {
+    width: 170px;
+}
+
+.deal-text {
+    font-weight: 800;
+}
+
+.product-card:hover {
+    cursor: pointer;
+}
+
+a.link-container:link {
+    text-decoration: none;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.product-card-container {
+    margin-left: 8px;
+    margin-right: 8px;
+}
