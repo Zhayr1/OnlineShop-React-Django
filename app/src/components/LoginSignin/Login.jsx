@@ -1,7 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { startUserLogin } from '../../redux/actions/sesion';
 
 export function Login() {
+
+    let navigate = useNavigate();
+
+    const userIsAuthenticated = useSelector(state => state.userIsAuthenticated)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if(userIsAuthenticated){
+            navigate("/", { replace: true })
+        }
+    },[userIsAuthenticated])
 
     const [formValues, setFormValues] = React.useState({
         email: '',
@@ -13,6 +26,20 @@ export function Login() {
             ...formValues,
             [event.target.id]: event.target.value
         })
+    }
+
+    const PerformLogin = (event) => {
+        event.preventDefault();
+        if (formValues.email === '' && formValues.password === ''){
+            console.log('error');
+            return null;
+        }
+        dispatch(startUserLogin({
+            payload: {
+                email:formValues.email, 
+                password: formValues.password
+            }
+        }))
     }
 
     return (
@@ -37,7 +64,7 @@ export function Login() {
                         </div>
                         <div className="row">
                             <div className="col 12">
-                                <button className='btn primary cbtn'>Log In</button>
+                                <button className='btn primary cbtn' onClick={PerformLogin}>Log In</button>
                             </div>
                             <div className="col s12">
                                 <p>

@@ -8,6 +8,7 @@ import { CASSection } from './components/ClothesAndShoesSection/CASSection.jsx'
 import { ProductDetails } from './components/ProductDetails.jsx'
 import { Login } from './components/LoginSignin/Login.jsx'
 import {Signin} from './components/LoginSignin/Signin';
+import { Cart } from './components/ShoppingCart/Cart';
 import {
   BrowserRouter,
   Routes,
@@ -24,6 +25,7 @@ ReactDOM.render(
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="products" element={<CASSection />} />
           <Route path="products" element={<ProductDetails />} >
             <Route path=":productID" element={<ProductDetails />} />

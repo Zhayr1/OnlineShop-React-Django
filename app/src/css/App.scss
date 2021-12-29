@@ -41,7 +41,12 @@
 }
 
 p {
-    font-weight: 300;
+    font-weight: 500;
+    margin: 0;
+}
+
+.fw800 {
+    font-weight: 600;
 }
 
 .flex {
@@ -60,6 +65,7 @@ p {
 .fill-screen {
     min-height: 89vh;
 }
+
 
 .primary-text {
     color: #4F80C4;

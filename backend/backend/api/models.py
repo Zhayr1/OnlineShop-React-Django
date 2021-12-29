@@ -1,5 +1,5 @@
 from django.db import models
-from django.conf.global_settings import AUTH_USER_MODEL
+from django.conf import settings
 
 # Create your models here.
 class Product(models.Model):
@@ -18,3 +18,7 @@ class ProductImage(models.Model):
     image = models.ImageField()
 
     
+class CartItem(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=0)
